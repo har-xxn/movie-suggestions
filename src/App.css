@@ -1,0 +1,177 @@
+/* General Styling */
+@font-face {
+  font-family: 'Poppins'; 
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('./boys-watching-tv.jpg'); /* adjust the path if needed */
+  background-repeat: no-repeat;  /* Prevent image repetition */
+  background-size: cover;        /* Scale the image to fully cover the background */
+  background-attachment: fixed;  /* Keep the image in place while scrolling */
+  background-color: #121826; /* Dark background */
+  color: #f5f5f5; /* Light text */
+}
+
+
+
+#app-container {
+  width: 80%; 
+  max-width: 1200px; /* Limit max width */ 
+  margin: 0 auto;  /* Center the container */
+  margin-left: 1px;
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Header Styling */
+h2 {
+  text-align: left; /* Left aligned */
+  font-size: 40px;
+  font-weight: 600; 
+  margin: 0; 
+  color: #ff9a5b; /* Bold orange */
+}
+
+/* Recommendations Section Styling */
+.movie-suggestions {
+  width: 60%; 
+  padding: 20px;
+  background-color: #1c2435; /* Darker, subdued background */
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.movie-suggestions p {
+  font-style: normal; 
+  margin-bottom: 15px; 
+}
+
+.movie-suggestions ul li {
+  margin-bottom: 10px;
+}
+
+.movie-suggestions ul li span {
+  display: block; /* Make spans block-elements */
+  font-weight: bold;
+  margin-bottom: 5px; 
+}
+
+/* Input Section Styling */
+.input-section {
+  width: 35%;
+  padding: 30px;
+  background-color: #202A44;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column; 
+}
+
+
+
+:root {
+  --arrow-bg: rgba(100, 71, 71, 0.3);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: rgba(255, 255, 255, 0.2);
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 10rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: rgb(62, 3, 73);
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
+
+.description-row {
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+
+textarea {
+  width: 90%;
+  resize: vertical, horizontal;
+  min-height: 50px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.2); /* Light grey background */
+  border: 4px solid #ccc; /* Default border */
+  border-radius: 10px; /* Add rounded corners for better effect */
+  border-color: rgba(100, 71, 71, 0.3);
+  padding: 10px;
+  
+
+}
+
+
+textarea:focus {
+  border-color: #061320; /* Blue border on focus */
+}
+
+/* Optional: Additional focus colors */
+
+
+
+/* Button Styling */
+/* ... other styles from before ... */
+
+#search-button {
+  /* ... other styles from before ... */
+  padding: 15px 30px;  /* Increase padding for larger size */
+  border-radius: 25px; /* Creates the oval shape - higher value = more rounded */
+  background-image: linear-gradient(to right, #ff9a5b, #ff6847); /* Your gradient colors */
+  border: none; /* Remove the default border */
+}
+
+#search-button:hover {
+  background-image: linear-gradient(to right, #fc8b4e, #ee5a39); /* Slightly modified gradient */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* A subtle shadow effect */
+}
+
+
+
+/* Optional: Subtle animation on hover */
+.movie-suggestions, .input-section {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.movie-suggestions:hover, .input-section:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
